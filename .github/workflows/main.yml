@@ -18,7 +18,7 @@ on:
 
 # 设置权限
 permissions:
-  contents: read
+  contents: write  # 需要写权限来推送到 gh-pages 分支
   pages: write
   id-token: write
 
@@ -28,7 +28,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       # 1. 检出代码
@@ -52,20 +52,17 @@ jobs:
       - name: Build VitePress docs
         run: npm run docs:build
 
-      # 5. 上传构建产物
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .vitepress/dist
-
-  # 部署任务
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
+      # 5. 部署到 gh-pages 分支
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .vitepress/dist
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy docs: ${{ github.sha }}'
+          # 保持历史记录，如果不需要可以设置为 true
+          force_orphan: false
+          # 添加 CNAME 文件支持自定义域名（如果需要的话）
+          # cname: your-domain.com
