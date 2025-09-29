@@ -1,0 +1,14 @@
+{
+  "name": "antlia-docs",
+  "version": "1.0.0",
+  "description": "Antlia documentation",
+  "scripts": {
+    "docs:dev": "vitepress dev --host",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "dev": "vite --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
