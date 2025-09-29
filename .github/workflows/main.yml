@@ -10,7 +10,7 @@ on:
 
 # 设置 GITHUB_TOKEN 的权限
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -43,7 +43,9 @@ jobs:
       - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 如果 GITHUB_TOKEN 权限不足，可以使用 personal_token
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: docs/.vitepress/dist
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
