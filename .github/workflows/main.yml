@@ -1,4 +1,4 @@
-name: Deploy VitePress Docs
+name: Build and Push VitePress Docs
 
 on:
   push:
@@ -19,16 +19,14 @@ on:
 # 设置权限
 permissions:
   contents: write  # 需要写权限来推送到 gh-pages 分支
-  pages: write
-  id-token: write
 
-# 确保同时只有一个部署任务运行
+# 确保同时只有一个构建任务运行
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: build-docs
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
       # 1. 检出代码
@@ -52,8 +50,8 @@ jobs:
       - name: Build VitePress docs
         run: npm run docs:build
 
-      # 5. 部署到 gh-pages 分支
-      - name: Deploy to GitHub Pages
+      # 5. 推送构建产物到 gh-pages 分支
+      - name: Push to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -61,8 +59,6 @@ jobs:
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'Deploy docs: ${{ github.sha }}'
-          # 保持历史记录，如果不需要可以设置为 true
+          commit_message: 'Build docs: ${{ github.sha }}'
+          # 保持历史记录
           force_orphan: false
-          # 添加 CNAME 文件支持自定义域名（如果需要的话）
-          # cname: your-domain.com
