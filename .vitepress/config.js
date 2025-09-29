@@ -35,7 +35,7 @@ export default {
       { text: 'GitHub', link: 'https://github.com/zhende1113/Antlia' },
     ],
     editLink: {
-      pattern: 'https://github.com/zhende1113/Antlia/edit/main/docs/:path',
+      pattern: 'https://github.com/Astriora/Astriora.github.io/edit/main/docs/:path',
       text: '不妥之处，敬请雅正'
     },
 sidebar: {
