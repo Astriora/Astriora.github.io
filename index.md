@@ -21,7 +21,7 @@ hero:
       link: /guide
     - theme: alt
       text: 查看源码
-      link: https://github.com/zhende1113/Antlia
+      link: https://github.com/Astriora/Antlia
 
 features:
   - icon: 🚀
