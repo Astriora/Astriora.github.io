@@ -3,29 +3,34 @@ layout: home
 
 hero:
   name: "Antlia"
-  text: "轻量级脚本项目部署工具"
+  text: |
+    実行せよ。
   tagline: 一键部署 / 使用简单 / 健壮
   image:
-    src: /logo1.png
+    src: /logo.png
     alt: Antlia Logo
-    style: "border-radius: 20px; border: 2px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.2);"
+    style: |
+      border-radius: 20px;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
 
   actions:
     - theme: brand
-      text: 快速开始
+      text: 立即体验
       link: /guide
     - theme: alt
-      text: GitHub 仓库
+      text: 查看源码
       link: https://github.com/zhende1113/Antlia
 
 features:
   - icon: 🚀
     title: 一键部署
-    details: 快速部署项目
+    details: 快速部署项目，无需复杂配置
   - icon: ⚡
     title: 使用简单
-    details: 完善的部署与启动
+    details: 一条命令启动，轻松管理脚本
   - icon: 🛠️
     title: 健壮
-    details: 多次测试保证稳定性 
+    details: 多次测试保证稳定性与可靠性
 ---

@@ -4,11 +4,18 @@
 }
 
 /* 首页大标题渐变 */
-.vp-doc h1 {
+/*.vp-doc h1 {
   background: linear-gradient(120deg, #4facfe, #00f2fe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+*/
+.vp-doc h1 {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important; /* 兼容非 WebKit 浏览器 */
 }
+
 
 /* 页脚样式 */
 .vp-footer {
