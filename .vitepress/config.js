@@ -1,34 +1,67 @@
-export default {
+import { defineConfig } from 'vitepress'
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
+
+export default defineConfig({
+  lang: 'zh-CN',
   title: 'Antlia',
   description: '轻量级脚本项目部署工具',
+  
+  vite: {
+    plugins: [
+      GitChangelog({
+        repoURL: 'https://github.com/zhende1113/Antlia',
+        mapAuthors: [
+          {
+            name: 'zhende1113',
+            avatar: '/logo1.png',
+          },
+          {
+            name: 'Astriora',
+            avatar: '/logo1.png',
+          },
+        ],
+      }),
+      GitChangelogMarkdownSection({
+        sections: {
+          disableChangelog: false,
+          disableContributors: false,
+        },
+      }),
+    ],
+    optimizeDeps: {
+      exclude: [
+        '@nolebase/vitepress-plugin-git-changelog/client',
+      ],
+    },
+    ssr: {
+      noExternal: [
+        '@nolebase/vitepress-plugin-git-changelog',
+      ],
+    },
+  },
+  
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo1.png' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
   ],
+  
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo1.png',
     search: {
       provider: 'local',
       options: {
         translations: {
-          button: {
-            buttonText: '搜索',
-            buttonAriaLabel: '搜索文档'
-          },
+          button: { buttonText: '搜索', buttonAriaLabel: '搜索文档' },
           modal: {
             noResultsText: '没有找到结果',
             resetButtonTitle: '清除搜索',
-            footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭'
-            }
-          }
-        }
-      }
+            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
+          },
+        },
+      },
     },
     nav: [
       { text: '指南', link: '/guide' },
@@ -36,33 +69,28 @@ export default {
     ],
     editLink: {
       pattern: 'https://github.com/Astriora/Astriora.github.io/edit/main/:path',
-      text: '不妥之处，敬请雅正'
+      text: '不妥之处，敬请雅正',
     },
-sidebar: {
-  '/': [
-    {
-      text: '其他功能',
-      items: [
-        { text: '项目脚本状态', link: '/guide' },
-      ]
+    sidebar: {
+      '/': [
+        {
+          text: '其他功能',
+          items: [{ text: '项目脚本状态', link: '/guide' }],
+        },
+        {
+          text: 'Bot项目相关',
+          items: [
+            { text: 'AstrBot', link: '/QQBot/AstrBot' },
+            { text: 'Eridanus', link: '/QQBot/Eridanus' },
+            { text: 'NapCat', link: '/QQBot/NapCat' },
+            { text: 'Lagange.OneBot', link: '/QQBot/Lagange-OneBot' },
+          ],
+        },
+        {
+          text: 'Python环境管理相关',
+          items: [{ text: 'UV', link: '/Python/uv' }],
+        },
+      ],
     },
-    {
-      text: 'Bot项目相关',
-      items: [
-        { text: 'AstrBot', link: '/QQBot/AstrBot' },
-        { text: 'Eridanus', link: '/QQBot/Eridanus' },
-        { text: 'NapCat', link: '/QQBot/NapCat' },
-        { text: 'Lagange.OneBot', link: '/QQBot/Lagange-OneBot' },
-      ]
-    },
-    {
-      text: 'Python环境管理相关',
-      items: [
-        { text: 'UV', link: '/Python/uv' },
-      ]
-    }
-  ]
-}
-
   },
-}
+})

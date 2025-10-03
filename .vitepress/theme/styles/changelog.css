@@ -1,0 +1,196 @@
+/* ============================================
+   彻底移除所有绿色,改为黑色主题
+   ============================================ */
+
+/* 基础变量覆盖 */
+:root {
+  --vp-nolebase-git-changelog-accent-color: #2c3e50 !important;
+  --vp-nolebase-git-changelog-bg-color: #ffffff !important;
+}
+
+.dark {
+  --vp-nolebase-git-changelog-accent-color: #c9d1d9 !important;
+  --vp-nolebase-git-changelog-bg-color: #1a1a1a !important;
+}
+
+/* 强制覆盖所有 Changelog 相关的颜色 */
+.VPNolebaseGitChangelog * {
+  --vp-c-brand: #2c3e50 !important;
+  --vp-c-brand-1: #2c3e50 !important;
+  --vp-c-brand-2: #2c3e50 !important;
+  --vp-c-brand-3: #2c3e50 !important;
+}
+
+.dark .VPNolebaseGitChangelog * {
+  --vp-c-brand: #c9d1d9 !important;
+  --vp-c-brand-1: #c9d1d9 !important;
+  --vp-c-brand-2: #c9d1d9 !important;
+  --vp-c-brand-3: #c9d1d9 !important;
+}
+
+/* 时间轴线条 */
+.VPNolebaseGitChangelog .timeline::before,
+.VPNolebaseGitChangelog [class*="timeline"]::before,
+.VPNolebaseGitChangelog [class*="line"] {
+  background-color: #2c3e50 !important;
+  background: #2c3e50 !important;
+  border-color: #2c3e50 !important;
+}
+
+.dark .VPNolebaseGitChangelog .timeline::before,
+.dark .VPNolebaseGitChangelog [class*="timeline"]::before,
+.dark .VPNolebaseGitChangelog [class*="line"] {
+  background-color: #c9d1d9 !important;
+  background: #c9d1d9 !important;
+  border-color: #c9d1d9 !important;
+}
+
+/* 提交点/圆点 */
+.VPNolebaseGitChangelog [class*="dot"],
+.VPNolebaseGitChangelog [class*="circle"],
+.VPNolebaseGitChangelog [class*="point"] {
+  background-color: #2c3e50 !important;
+  background: #2c3e50 !important;
+  border-color: #2c3e50 !important;
+  color: #ffffff !important;
+}
+
+.dark .VPNolebaseGitChangelog [class*="dot"],
+.dark .VPNolebaseGitChangelog [class*="circle"],
+.dark .VPNolebaseGitChangelog [class*="point"] {
+  background-color: #c9d1d9 !important;
+  background: #c9d1d9 !important;
+  border-color: #c9d1d9 !important;
+  color: #1a1a1a !important;
+}
+
+/* 链接颜色 */
+.VPNolebaseGitChangelog a,
+.VPNolebaseGitChangelog [class*="link"],
+.VPNolebaseGitChangelog [class*="commit"] {
+  color: #2c3e50 !important;
+}
+
+.dark .VPNolebaseGitChangelog a,
+.dark .VPNolebaseGitChangelog [class*="link"],
+.dark .VPNolebaseGitChangelog [class*="commit"] {
+  color: #c9d1d9 !important;
+}
+
+/* 链接悬停 */
+.VPNolebaseGitChangelog a:hover,
+.VPNolebaseGitChangelog [class*="link"]:hover {
+  color: #000000 !important;
+  text-decoration: underline;
+}
+
+.dark .VPNolebaseGitChangelog a:hover,
+.dark .VPNolebaseGitChangelog [class*="link"]:hover {
+  color: #ffffff !important;
+}
+
+/* 文本颜色 */
+.VPNolebaseGitChangelog {
+  color: #1a1a1a !important;
+}
+
+.dark .VPNolebaseGitChangelog {
+  color: #e0e0e0 !important;
+}
+
+/* 标题 */
+.VPNolebaseGitChangelog h1,
+.VPNolebaseGitChangelog h2,
+.VPNolebaseGitChangelog h3,
+.VPNolebaseGitChangelog [class*="title"] {
+  color: #1a1a1a !important;
+}
+
+.dark .VPNolebaseGitChangelog h1,
+.dark .VPNolebaseGitChangelog h2,
+.dark .VPNolebaseGitChangelog h3,
+.dark .VPNolebaseGitChangelog [class*="title"] {
+  color: #e0e0e0 !important;
+}
+
+/* 贡献者头像边框 */
+.VPNolebaseGitChangelog img,
+.VPNolebaseGitChangelog [class*="avatar"] {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb !important;
+}
+
+.dark .VPNolebaseGitChangelog img,
+.dark .VPNolebaseGitChangelog [class*="avatar"] {
+  border-color: #374151 !important;
+}
+
+/* 强制覆盖所有可能的绿色 */
+.VPNolebaseGitChangelog [style*="green"],
+.VPNolebaseGitChangelog [style*="#10b981"],
+.VPNolebaseGitChangelog [style*="rgb(16, 185, 129)"] {
+  color: #2c3e50 !important;
+  background-color: transparent !important;
+  border-color: #2c3e50 !important;
+}
+
+.dark .VPNolebaseGitChangelog [style*="green"],
+.dark .VPNolebaseGitChangelog [style*="#10b981"],
+.dark .VPNolebaseGitChangelog [style*="rgb(16, 185, 129)"] {
+  color: #c9d1d9 !important;
+  background-color: transparent !important;
+  border-color: #c9d1d9 !important;
+}
+
+/* SVG 图标颜色 */
+.VPNolebaseGitChangelog svg {
+  fill: #2c3e50 !important;
+  stroke: #2c3e50 !important;
+}
+
+.dark .VPNolebaseGitChangelog svg {
+  fill: #c9d1d9 !important;
+  stroke: #c9d1d9 !important;
+}
+
+/* 按钮颜色 */
+.VPNolebaseGitChangelog button,
+.VPNolebaseGitChangelog [class*="button"] {
+  background-color: #2c3e50 !important;
+  border-color: #2c3e50 !important;
+  color: #ffffff !important;
+}
+
+.dark .VPNolebaseGitChangelog button,
+.dark .VPNolebaseGitChangelog [class*="button"] {
+  background-color: #c9d1d9 !important;
+  border-color: #c9d1d9 !important;
+  color: #1a1a1a !important;
+}
+
+.VPNolebaseGitChangelog button:hover,
+.VPNolebaseGitChangelog [class*="button"]:hover {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.dark .VPNolebaseGitChangelog button:hover,
+.dark .VPNolebaseGitChangelog [class*="button"]:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* 高亮文本 */
+.VPNolebaseGitChangelog mark,
+.VPNolebaseGitChangelog [class*="highlight"] {
+  background-color: #f3f4f6 !important;
+  color: #1a1a1a !important;
+}
+
+.dark .VPNolebaseGitChangelog mark,
+.dark .VPNolebaseGitChangelog [class*="highlight"] {
+  background-color: #374151 !important;
+  color: #e0e0e0 !important;
+}
