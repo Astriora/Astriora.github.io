@@ -10,45 +10,43 @@
 
 ## 使用脚本部署 MaiBot
 
-## 安装curl
+## 安装wget
 
 ::: code-group
 
 ```bash [apt]
-sudo apt install curl
+sudo apt install wget
 ```
 
 ```bash [yum]
-sudo yum install curl
+sudo yum install wget
 ```
 
 ```bash [dnf]
-sudo dnf install curl
+sudo dnf install wget
 ```
 
 ```bash [pacman]
-sudo pacman -S curl
+sudo pacman -S wget
 ```
 
 ```bash [zypper]
-sudo zypper install curl
+sudo zypper install wget
 ```
 
 :::
 
 ## 下载脚本 & 部署
 
-::: code-group
+```bash
+bash -c '
+[ -f maibot-install.sh ] && rm -f maibot-install.sh &&
+wget -O maibot-install.sh https://raw.githubusercontent.com/Astriora/Antlia/refs/heads/main/Script/MaiBot/MaiBot-install.sh &&
+bash maibot-install.sh
+'
 
-```bash [方法一]
-curl -sSL https://raw.githubusercontent.com/Astriora/Antlia/refs/heads/main/Script/MaiBot/MaiBot-install.sh | bash
 ```
 
-```bash [方法二]
-wget -O maibot-install.sh https://raw.githubusercontent.com/Astriora/Antlia/refs/heads/main/Script/MaiBot/MaiBot-install.sh && bash Antlia.sh
-```
-
-:::
 
 ## 启动
 ```bash

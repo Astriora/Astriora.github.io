@@ -10,45 +10,43 @@ WebUI。可视化配置和管理机器人，功能齐全。
 
 ## 使用脚本部署 Astrbot
 
-## 安装curl
+## 安装wget
 
 ::: code-group
 
 ```bash [apt]
-sudo apt install curl
+sudo apt install wget
 ```
 
 ```bash [yum]
-sudo yum install curl
+sudo yum install wget
 ```
 
 ```bash [dnf]
-sudo dnf install curl
+sudo dnf install wget
 ```
 
 ```bash [pacman]
-sudo pacman -S curl
+sudo pacman -S wget
 ```
 
 ```bash [zypper]
-sudo zypper install curl
+sudo zypper install wget
 ```
 
 :::
 
 ## 下载脚本 & 部署
 
-::: code-group
+```bash
+bash -c '
+[ -f astrbot-install.sh ] && rm -f astrbot-install.sh &&
+wget -O astrbot-install.sh https://github.com/Astriora/Antlia/raw/refs/heads/main/Script/AstrBot/Antlia.sh &&
+bash astrbot-install.sh
+'
 
-```bash [方法一]
-curl -sSL https://github.com/Astriora/Antlia/raw/refs/heads/main/Script/AstrBot/Antlia.sh | bash
 ```
 
-```bash [方法二]
-wget -O Antlia.sh https://github.com/Astriora/Antlia/raw/refs/heads/main/Script/AstrBot/Antlia.sh && bash Antlia.sh
-```
-
-:::
 
 ## 使用脚本启动
 
