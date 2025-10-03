@@ -32,10 +32,9 @@ sudo zypper install wget
 ## 下载脚本 & 部署
 
 ```bash
-bash -c '
-[ -f napcat-install.sh ] && rm -f napcat-install.sh &&
+
 wget -O napcat-install.sh https://raw.githubusercontent.com/Astriora/Antlia/refs/heads/main/Script/NapCat/install.sh &&
 bash napcat-install.sh
-'
+
 
 ```

@@ -39,11 +39,11 @@ sudo zypper install wget
 ## 下载脚本 & 部署
 
 ```bash
-bash -c '
-[ -f maibot-install.sh ] && rm -f maibot-install.sh &&
+
+
 wget -O maibot-install.sh https://raw.githubusercontent.com/Astriora/Antlia/refs/heads/main/Script/MaiBot/MaiBot-install.sh &&
 bash maibot-install.sh
-'
+
 
 ```
 

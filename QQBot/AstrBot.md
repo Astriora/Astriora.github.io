@@ -39,11 +39,10 @@ sudo zypper install wget
 ## 下载脚本 & 部署
 
 ```bash
-bash -c '
-[ -f astrbot-install.sh ] && rm -f astrbot-install.sh &&
+
 wget -O astrbot-install.sh https://github.com/Astriora/Antlia/raw/refs/heads/main/Script/AstrBot/Antlia.sh &&
 bash astrbot-install.sh
-'
+
 
 ```
 
