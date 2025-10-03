@@ -84,6 +84,7 @@ export default defineConfig({
             { text: 'Eridanus', link: '/QQBot/Eridanus' },
             { text: 'NapCat', link: '/QQBot/NapCat' },
             { text: 'Lagange.OneBot', link: '/QQBot/Lagange-OneBot' },
+            { text: 'MaiBot', link: '/QQBot/MaiBot' },
           ],
         },
         {
