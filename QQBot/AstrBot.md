@@ -33,7 +33,6 @@ sudo pacman -S wget
 ```bash [zypper]
 sudo zypper install wget
 ```
-
 :::
 
 ## 下载脚本 & 部署
@@ -50,7 +49,7 @@ bash astrbot-install.sh
 ## 使用脚本启动
 
 ```bash
-./start.sh
+./astrbot.sh
 ```
 ## --分割线--
 
