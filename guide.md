@@ -6,9 +6,9 @@
 | 项目 | 是否维护 | 是否写入文档 | 脚本类型 / 部署方式 |
 |------|----------|--------------|--------------------|
 | [AstrBot](QQBot/AstrBot) | ✅ 是 | ✅ 是 | 社区提供的部署方式 |
-| [Eridanus](QQBot/Eridanus) | ❌ | ❌ | 自用脚本 |
-| [NapCat](QQBot/NapCat) | ❌ | ❌ | 自用脚本 |
-| [Lagange-OneBot](QQBot/Lagange-OneBot) | ❌ | ❌ | 自用脚本 |
+| [Eridanus](QQBot/Eridanus) | ✅ 是 | ❌ | 自用脚本 |
+| [NapCat](QQBot/NapCat) | ✅ 是 | ❌ | 自用脚本 |
+| [Lagange-OneBot](QQBot/Lagange-OneBot) | ✅ 是 | ❌ | 自用脚本 |
 | [MaiBot](QQBot/MaiBot) |✅ 是 | ✅ 是 | 社区提供的部署方式 |
 
 ---
