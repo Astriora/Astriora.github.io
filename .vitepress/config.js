@@ -81,7 +81,6 @@ export default defineConfig({
           text: 'Bot项目相关',
           items: [
             { text: 'AstrBot', link: '/QQBot/AstrBot' },
-            { text: 'Eridanus', link: '/QQBot/Eridanus' },
             { text: 'NapCat', link: '/QQBot/NapCat' },
             { text: 'Lagange.OneBot', link: '/QQBot/Lagange-OneBot' },
             { text: 'MaiBot', link: '/QQBot/MaiBot' },
